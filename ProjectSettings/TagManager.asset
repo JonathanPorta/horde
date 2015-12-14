@@ -8,6 +8,9 @@ TagManager:
   - Arena
   - GameManager
   - OverheadCamera
+  - CurrentPlayerCamera
+  - HordeManager
+  - Enemy
   layers:
   - Default
   - TransparentFX

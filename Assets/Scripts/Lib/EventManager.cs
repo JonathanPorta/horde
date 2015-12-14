@@ -42,17 +42,17 @@ public class EventManager : MonoBehaviour {
             thisEvent.AddListener(listener);
             instance.eventDictionary.Add(eventName, thisEvent);
         }
-        Debug.Log(string.Format("Registered Event: {0}", eventName));
+        //Debug.Log(string.Format("Registered Event: {0}", eventName));
     }
 
     public static void StopListening(string eventName, UnityAction listener) {
-        //if (eventManager == null) return;
+        if (eventManager == null) return;
         UnityEvent thisEvent = null;
    
         if (instance.eventDictionary.TryGetValue(eventName, out thisEvent)) {
             thisEvent.RemoveListener(listener);
         }
-        Debug.Log(string.Format("Unregistered Event: {0}", eventName));
+        //Debug.Log(string.Format("Unregistered Event: {0}", eventName));
     }
 
     public static void TriggerEvent(string eventName) {
@@ -62,6 +62,6 @@ public class EventManager : MonoBehaviour {
         if (instance.eventDictionary.TryGetValue(eventName, out thisEvent)) {
             thisEvent.Invoke();
         }
-        Debug.Log(string.Format("Tried to trigger Event: {0}", eventName));
+        //Debug.Log(string.Format("Tried to trigger Event: {0}", eventName));
     }
 }

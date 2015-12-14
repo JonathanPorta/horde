@@ -27,6 +27,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 458472}
+  - 114: {fileID: 11478896}
   m_Layer: 0
   m_Name: CameraManager
   m_TagString: Untagged
@@ -99,7 +100,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184082}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!92 &9297480
 Behaviour:
   m_ObjectHideFlags: 1
@@ -107,6 +108,17 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184082}
   m_Enabled: 1
+--- !u!114 &11478896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e8b57a1cdff1b74caf79314845de613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!124 &12476348
 Behaviour:
   m_ObjectHideFlags: 1
