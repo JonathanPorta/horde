@@ -25,6 +25,7 @@ public class EnemyController : MonoBehaviour {
     target = FindClosestTarget();
 
     if(target != null) {
+      Debug.Log("Found Target");
       nav.SetDestination(target.transform.position);
       transform.LookAt(target.transform.position);
     }

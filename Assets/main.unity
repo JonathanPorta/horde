@@ -345,7 +345,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e032adeded02818429701ea1281e5ae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  round: 0
   localPlayerPrefab: {fileID: 105156, guid: 0c20a0515002670428105ec13a8af820, type: 2}
   hordeManager: {fileID: 0}
 --- !u!4 &165840131
@@ -464,12 +463,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 171674, guid: a602a7e20b4db5e4c8970f795d6eb629, type: 2}
-  spawnTimeout: 0
-  numberToSpawn: 0
-  spawnCount: 0
-  lastSpawn: 0
-  enemies: []
-  roundStarted: 0
 --- !u!4 &313810971
 Transform:
   m_ObjectHideFlags: 0

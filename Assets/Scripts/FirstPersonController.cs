@@ -9,6 +9,7 @@ public class FirstPersonController : MonoBehaviour {
   public float upDownRange = 60.0f;
   public float jumpSpeed = 20.0f;
   public float sprintMultiplier = 10.5f;
+  public Camera playerCam;
 
   private float verticalRotation = 0;
   private float verticalVelocity = 0;
@@ -22,15 +23,18 @@ public class FirstPersonController : MonoBehaviour {
 
   // Update is called once per frame
   void Update() {
-
+    // bail if player is not active
+    if(!playerCam.isActiveAndEnabled) return;
+    
     // Left Right Camera Rotation
     float leftRightRotation = Input.GetAxis("Mouse X") * mouseSensitivity;
     transform.Rotate(0, leftRightRotation, 0);
 
+    
     // Up Down Camera Rotation
-    //verticalRotation -= Input.GetAxis("Mouse Y") * mouseSensitivity;
-    //verticalRotation = Mathf.Clamp(verticalRotation, -upDownRange, upDownRange);
-    //Camera.main.transform.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
+    verticalRotation -= Input.GetAxis("Mouse Y") * mouseSensitivity;
+    verticalRotation = Mathf.Clamp(verticalRotation, -upDownRange, upDownRange);
+    playerCam.transform.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
 
     // Move Forward, Backward, Left, and Right
 
